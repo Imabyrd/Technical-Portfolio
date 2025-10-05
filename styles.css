@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@400;700&display=swap');
+
+:root {
+    /* Primary Colors */
+    --primary: #B4A5D5;
+    --secondary-1: #F5C7C2;
+    --secondary-2: #B8C5B0;
+    --tertiary: #E8D4A2;
+
+    /* Neutrals */
+    --bg-cream: #FAF7F2;
+    --text-dark: #1F1F23;
+    --text-light: #FFFFFF;
+
+    /* Optional: Lighter/Darker variations */
+    --primary-light: #D4CBE5;
+    --primary-dark: #9488B8;
+}
+
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-cream);
+}
+
+/* Navbar Styles */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--bg-cream);
+    box-shadow: 0 2px 8px rgba(180, 165, 213, 0.08);
+    /* optional subtle shadow */
+    max-height: 350px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.navdiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.navdiv a {
+    display: inline-flex;
+    text-decoration: none;
+    color: var(--text-dark);
+    font-family: 'Ysabeau SC';
+    font-size: 18px;
+    font-weight: regular;
+    margin: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+.navdiv a:hover {
+    color: var(--primary-dark);
+    transition: color 0.2s;
+    font-weight: bold;
+    transition: font-weight 0.2s;
+}
+.navdiv ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+.navdiv li {
+    list-style-type: none;
+    margin-right: 25px;
+}
+
+.navdiv li:last-child {
+    margin-right: 0;
+}
+
+.logo a {
+    width: 60px;
+    height: 60px;
+    aspect-ratio: 1/1;
+    display: block;
+    color: var(--text-dark);
+}
+/* Hero Section */
+#hero {
+    /* Example height */
+    height: 600px;
+    width: 100%;
+    display: flex;
+    /* For easy centering of content */
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.hero-content {
+    color: var(--text-dark);
+    text-align: center;
+    max-width: 800px;
+    background-color: transparent;
+    /* Optional: semi-transparent background for readability */
+    border-radius: 15px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.hero-content h1 {
+    font-family: 'Ysabeau SC';
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-content h2 {
+    font-family: 'Ysabeau Office';
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-family: 'Ysabeau Office';
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* Primary Button Styles */
+.primary-button {
+    background-color: var(--primary);
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    padding: 12px 30px;
+    font-family: 'Ysabeau SC';
+    font-size: 18px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    /* Removes border */
+    box-shadow: 0 2px 8px rgba(180, 165, 213, 0.15);
+    /* Soft drop shadow */
+    transition: box-shadow 0.2s;
+}
+.primary-button a {
+    color: var(--text-dark);
+}
+
+.primary-button:hover {
+    box-shadow: 0 4px 12px rgba(180, 165, 213, 0.3);
+    /* Enhanced shadow on hover */
+    cursor: pointer;
+    transform: scale(1.08);
+    /* Grows the button by 8% */
+    transition: transform 0.2s;
+}
+.secondary-button-green {
+    background-color: var(--secondary-2);
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    padding: 12px 30px;
+    font-family: 'Ysabeau SC';
+    font-size: 18px;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    /* Removes border */
+    box-shadow: 0 2px 8px rgba(180, 165, 213, 0.15);
+    /* Soft drop shadow */
+    transition: box-shadow 0.2s;
+}
+
+.secondary-button-green a {
+    color: var(--text-dark);
+}
+
+.secondary-button-green:hover {
+    box-shadow: 0 4px 12px rgba(180, 165, 213, 0.3);
+    /* Enhanced shadow on hover */
+    cursor: pointer;
+    transform: scale(1.08);
+    /* Grows the button by 8% */
+    transition: transform 0.2s;
+}
+
+/* Skill Icons Row */
+.skills-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    /* Space between icons */
+    margin-top: 15px;
+}
+.skills-grid{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 28px; /* vertical horizontal gaps */
+    max-width: 480px; /* controls how many icons per row */
+    margin: 0 auto;
+}
+.skill-icon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    display: inline-block;
+}
+
+/* Section Styles */
+#about, #projects {
+    height: 600px;
+}
+
+#about,
+#projects,
+#contact {
+    text-decoration: none;
+    font-family: 'Ysabeau SC';
+    padding: 50px 40px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 20px;
+    scroll-margin-top: 90px;
+}
+
+#about ul,
+#projects ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* About Me Section */
+
+/* About two-column layout (image left, text right) */
+#about {
+    /* keep your existing paddings if you want; the below centers the container */
+    padding: 40px 20px;
+}
+
+#about .about-container {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Image column (fixed size) */
+#about .about-image {
+    flex: 0 0 160px;
+    /* width of the left column */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Circular colored background that contains the image */
+#about .about-image-inner {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: var(--primary);
+    /* your primary color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+/* Make the image fit nicely inside the circle */
+#about .about-image-inner img {
+    width: 78%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    border-radius: 50%;
+}
+
+/* Text column (left-justified) */
+#about .about-text {
+    flex: 1 1 auto;
+    text-align: left;
+    /* ensure left-justified text */
+}
+
+/* Make .core-values keep its internal layout (if you want columns, use the existing .core-values) */
+#about .skills-and-expertise .core-values {
+    margin-top: 18px;
+}
+
+/* Responsive: stack on small screens */
+@media (max-width: 760px) {
+    #about .about-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        text-align: center;
+        /* optional: center text on small screens */
+    }
+
+    #about .about-text {
+        text-align: center;
+    }
+
+    /* mobile center - change to left if you prefer */
+    #about .about-image {
+        flex: 0 0 auto;
+    }
+}
+#skills-and-expertise {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 32px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+#core-values {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 18px;
+    flex: 1 1 auto;
+    text-align: left;
+}
+/* Responsive: stack columns on small screens */
+@media (max-width: 720px) {
+    .skills-container {
+        flex-direction: column;
+        gap: 14px;
+        align-items: center;
+    }
+
+    .skills-container  {
+        min-width: 0;
+        text-align: center;
+        /* optional: center on mobile */
+    }
+}
+
+/* Projects Section */
+.projects-scroll {
+    max-height: 400px;
+    /* Adjust height as needed */
+    overflow-y: auto;
+    /* Enables vertical scrolling */
+    padding-right: 10px;
+    /* Optional: space for scrollbar */
+    padding-bottom: 16px;
+    margin-top: 20px;
+}
+
+.projects-scroll ul {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    padding: 20px;
+    margin: 0;
+    list-style: none;
+}
+
+.projects-scroll li {
+    background-image: url('hero-image.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-width: 300px;
+    min-height: 250px;
+    text-align: center;
+    font-family: 'Ysabeau Office';
+    font-size: 16px;
+    color: var(--text-dark);
+    text-shadow: #1F1F23 0px 1px 1px 0.05;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(180, 165, 213, 0.12);
+    padding: 24px;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scrollbar-width: thin;
+    scrollbar-color: black #e8e8e8;
+    /* For Firefox */
+}
+
+.projects-scroll li:hover {
+    box-shadow: 0 4px 12px rgba(180, 165, 213, 0.25);
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
+
+/* Chrome, Edge, Safari */
+.projects-scroll::-webkit-scrollbar {
+    height: 8px;
+    /* horizontal scrollbar height */
+    background: transparent;
+}
+
+.projects-scroll::-webkit-scrollbar-track {
+    background: #e8e8e8;
+    /* light line */
+    border-radius: 4px;
+}
+
+.projects-scroll::-webkit-scrollbar-thumb {
+    background: black;
+    /* black bar */
+    border-radius: 4px;
+    border: 2px solid #e8e8e8;
+    /* creates a line effect */
+}
+
+/* Footer Styles */
+.copyright {
+    font-family: 'Ysabeau SC';
+    color: var(--text-dark);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+}
