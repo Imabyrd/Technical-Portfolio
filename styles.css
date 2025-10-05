@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@400;700&display=swap');
+
+:root {
+    /* Primary Colors */
+    --primary: #B4A5D5;
+    --secondary-1: #F5C7C2;
+    --secondary-2: #B8C5B0;
+    --tertiary: #E8D4A2;
+
+    /* Neutrals */
+    --bg-cream: #FAF7F2;
+    --text-dark: #3A3A3A;
+    --text-light: #FFFFFF;
+
+    /* Optional: Lighter/Darker variations */
+    --primary-light: #D4CBE5;
+    --primary-dark: #9488B8;
+}
+
+* {
+    background-color: var(--bg-cream);
+}
+
+#navbar {
+    background-color: white;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#navdiv {
+    text-decoration: none;
+    color: #010101;
+    font-size: 18px;
+    margin: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    aspect-ratio: 25%;
+    
+    color: #010101;
+}
+
+li {
+    list-style-type: none;
+li a {
+    text-decoration: none;
+    color: #010101;
+    font-family: 'Ysabeau SC';
+    font-size: 18px;
+    font-weight: bold;
+}
+li a:not(:last-child) {
+    margin-right: 25px;
+}
+    margin-right: 25px;
+}
+button {
+    background-color: var(--primary);
+    color: var(--text-dark);
+    margin-left: 10px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-family: 'Ysabeau SC';
+    font-size: 18px;
+    font-weight: bold;
+    font-size: 16px;
+}
