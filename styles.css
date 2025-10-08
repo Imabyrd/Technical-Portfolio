@@ -5,7 +5,8 @@
     --primary: #B4A5D5;
     --secondary-1: #F5C7C2;
     --secondary-2: #B8C5B0;
-    --tertiary: #E8D4A2;
+    --tertiary-1: #E8D4A2;
+    --tertiary-2: #6babc9;
 
     /* Neutrals */
     --bg-cream: #FAF7F2;
@@ -29,6 +30,13 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--bg-cream);
+}
+
+body h1, h2, h3 {
+    font-family: 'Ysabeau SC';
+}
+body p {
+    font-family: 'Ysabeau Office';
 }
 
 /* Navbar Styles */
@@ -166,6 +174,10 @@ body {
     animation: float 6s ease-in-out infinite;
 }
 
+#shapes{
+    z-index: -1;
+}
+
 .shape1 {
     width: 80px;
     height: 80px;
@@ -187,9 +199,17 @@ body {
 .shape3 {
     width: 100px;
     height: 100px;
-    background: var(--tertiary);
+    background: var(--tertiary-1);
     top: 60%;
     left: 15%;
+    animation-delay: 4s;
+}
+.shape4 {
+    width: 80px;
+    height: 80px;
+    background: var(--tertiary-2);
+    top: 20%;
+    right: 10%;
     animation-delay: 4s;
 }
 
@@ -277,6 +297,7 @@ section {
     gap: 15px;
     /* Space between icons */
     margin-top: 15px;
+    padding: 40px;
 }
 .skills-icon-grid{
     display: flex;
@@ -304,7 +325,7 @@ section {
     text-decoration: none;
     font-family: 'Ysabeau SC';
     font-size: large;
-    padding: 50px 40px;
+    padding: 60px;
     text-align: center;
     margin: 0 auto;
     max-width: 1000px;
@@ -319,19 +340,21 @@ section {
 }
 
 /* About Me Section */
-
+#about {
+    flex-wrap: wrap;
+    text-wrap: wrap;
+}
 /* About two-column layout (image left, text right) */
 #about .about-container{
     /* keep your existing paddings if you want; the below centers the container */
-    background-color: var(--secondary-2);
+    background-color: var(--tertiary-2);
     color: var(--text-light);
     border-radius: 20px;
     display: flex;
     gap: 50px;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 15px;
-    padding: 10rem 5%;
+    padding: 60px 40px;
     text-align: center;
     box-shadow: rgba(22, 22, 22, 0.028);
 }
@@ -368,6 +391,14 @@ section {
     display: block;
     border-radius: 50%;
 }
+#about .artwork img {
+    width: 80%;
+    height: auto;
+    object-fit: contain;
+    display: inline-block;
+    border-radius: 2%;
+    box-shadow: rgba(71, 121, 145, 0.2) 4px 4px 8px;
+}
 
 /* Text column (left-justified) */
 .about-text {
@@ -377,13 +408,37 @@ section {
     padding: 15px;
     /* ensure left-justified text */
 }
+.about-text h2 {
+    font-family: 'Ysabeau SC';
+    color: var(--text-light);
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.about-text p {
+    font-family: 'Ysabeau Office';
+    color: var(--text-light);
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    /* space between paragraphs */
+}
 
 /* Skills Section */
+#skills {
+    background-color: var(--bg-cream);
+    border-radius: 20px;
+    padding: 60px;
+    text-align: center;
+}
+
 #skills h2{
     font-family: 'Ysabeau SC';
-    font-size: 24px;
+    color: var(--text-dark);
+    font-size: 36px;
     font-weight: bold;
     margin-bottom: 40px;
+    padding: 40px;
 }
 .skills-grid{
     display: grid;
@@ -392,21 +447,19 @@ section {
 }
 
 .skill-card {
-    background: var(--bg-cream);
-    font-family: 'Ysabeau Office';
+    background: var(--tertiary-2);
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
     transition: all 0.3s;
-    border-top: 4px solid var(--primary);
 }
 
 .skill-card:nth-child(2) {
-    border-top-color: var(--secondary-1);
+    background-color: var(--secondary-2);
 }
 
 .skill-card:nth-child(3) {
-    border-top-color: var(--secondary-2);
+    background-color: var(--primary);
 }
 
 .skill-card:nth-child(4) {
@@ -419,14 +472,12 @@ section {
 }
 
 .skill-card h3 {
-    font-family: 'Ysabeau SC';
-    color: var(--primary-dark);
+    color: var(--text-light);
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
 .skill-card p {
-    color: var(--text-dark);
-    font-family: 'Ysabeau Office';
+    color: var(--text-light);
     font-size: 1rem;
     line-height: 1.5;
 }
@@ -440,7 +491,7 @@ section {
 
 .skill-tag {
     padding: 0.4rem 1rem;
-    background: var(--bg-cream);
+    background: rgb(238, 238, 232);
     border-radius: 20px;
     font-size: 0.9rem;
     color: var(--text-dark);
@@ -472,25 +523,25 @@ section {
     padding: 60px;
     text-align: center;
 }
-#projects h2{
-    font-family: 'Ysabeau SC';
-    font-size: 24px;
+.project-text h2{
+    color: var(--text-dark);
+    font-size: 40px;
     font-weight: bold;
     margin-bottom: 40px;
+    padding: 40px;
 }
-#projects p {
-    font-family: 'Ysabeau Office';
-    font-size: 16px;
-    margin-top: 20px;
+.project-text p {
+    color: var(--text-dark);
+    font-size: 24px;
+    margin-bottom: 40px;
+    padding: 40px;
 }
 .projects-scroll {
-    max-height: 400px;
+    max-height: 600px;
     /* Adjust height as needed */
     overflow-y: auto;
     /* Enables vertical scrolling */
-    padding-right: 10px;
-    /* Optional: space for scrollbar */
-    padding-bottom: 16px;
+    padding: 16px 20px;
     margin-top: 20px;
 }
 
@@ -511,9 +562,6 @@ section {
     min-width: 300px;
     min-height: 250px;
     text-align: center;
-    font-family: 'Ysabeau Office';
-    font-size: 16px;
-    color: var(--text-dark);
     text-shadow: #1F1F23 0px 1px 1px 0.05;
     padding: 24px;
     border-radius: 16px;
@@ -528,7 +576,24 @@ section {
     scrollbar-color: black #e8e8e8;
     /* For Firefox */
 }
+.
 
+.projects-scroll li h3 {
+    font-family: 'Ysabeau SC';
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.projects-scroll li p {
+    font-family: 'Ysabeau Office';
+    font-size: 24px;
+    margin-top: 16px;
+}
+.projects-scroll li h3, p {
+    text-decoration: none;
+    color: var(--text-light);
+    padding: 10px;
+}
 .projects-scroll li:hover {
     box-shadow: 0 4px 12px rgba(180, 165, 213, 0.25);
     transform: scale(1.05);
@@ -555,37 +620,31 @@ section {
     border: 2px solid #e8e8e8;
     /* creates a line effect */
 }
+
 #contact {
+    margin-top: 20px;
     border-radius: 20px;
-    padding: 4rem 5%;
+    padding: 40px;
     text-align: center;
 }
+
+#contact h2, p{
+    color: var(--text-dark);
+}
 .contact-links {
-    background-color: var(--primary);
-    gap: 2rem;
-    margin-top: 2rem;
+    display: inline-block;
+    gap: 20rem;
+    margin-top: 4rem;
     flex-wrap: wrap;
     margin-left: 10px;
-    margin-right: 10px;
-    border-radius: 10px;
     padding: 12px 30px;
-    font-family: 'Ysabeau SC';
-    font-size: 18px;
-    font-weight: bold;
-    font-size: 16px;
-    border: none;
-        /* Removes border */
-    box-shadow: 0 2px 8px rgba(180, 165, 213, 0.15);
-        /* Soft drop shadow */
-    transition: box-shadow 0.2s;
 }
-
-.contact-links a {
-    color: var(--text-light);
+.contact-links svg {
+    width: 40px;
+    height: 40px;
 }
 
 .contact-links:hover {
-    box-shadow: 0 4px 12px rgba(180, 165, 213, 0.3);
     /* Enhanced shadow on hover */
     cursor: pointer;
     transform: scale(1.08);
@@ -650,23 +709,25 @@ section {
 }
 
 /* Footer Styles */
+.copyright {
+    margin-top: 6px;
+    background-color: var(--primary);
+    font-family: 'Ysabeau SC';
+    text-align: center;
+    padding: 6px;
+    position: relative;
+    bottom: 0;
+}
+.copyright p {
+    font-size: 14px;
+    color: var(--text-light);
+}
 .footer-logo {
     width: 40px;
     height: 40px;
-    left: 0;
-    margin-top: 20px;
+    margin-top: 6px;
     aspect-ratio: 1/1;
     display: inline-block;
     justify-content: center;
     fill: var(--text-light);
-}
-.copyright {
-    margin-top: 20px;
-    background-color: var(--primary);
-    font-family: 'Ysabeau SC';
-    color: var(--text-light);
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
 }

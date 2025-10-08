@@ -38,9 +38,13 @@
 
    <!-- HERO SECTION-->
    <section id="hero">
-      <div class="floating-shape shape1"></div>
-      <div class="floating-shape shape2"></div>
-      <div class="floating-shape shape3"></div>
+      <div class="shapes">
+         <div class="floating-shape shape1"></div>
+         <div class="floating-shape shape2"></div>
+         <div class="floating-shape shape3"></div>
+         <div class="floating-shape shape4"></div>
+      </div>
+
       <div class="hero-content">
          <h1>Hi! I'm Emma - a Creative Technologist & Developer</h1>
          <h2>Building intuitive, imaginative, and technically powerful digital experiences</h2>
@@ -74,19 +78,16 @@
    <!-- ABOUT ME SECTION-->
    <section id="about">
       <div class="about-container">
-         <div class="about-image">
-            <div class="about-image-inner">
-               <img src="profile-pic.png" alt="Profile Picture of Emma">
-            </div>
-         </div>
-   
          <div class="about-text">
             <h1>About Me</h1>
             <p>I'm a multidisciplinary developer with a love for elegant design, interactive worlds, and intelligent
                systems.
-               My work spans web development, game design, and AI integration, always aiming to create seamless and
+               My work spans web development, game design, and AI integration as well as, art and music, always aiming to create seamless and
                engaging
                user experiences.</p>
+         </div>
+         <div class="artwork">
+            <img src="artwork.png" alt="Artwork by Emma Brannen">
          </div>
       </div>
    </section>
@@ -99,9 +100,8 @@
             <p>Creating responsive and interactive user interfaces</p>
             <div class="skill-tags">
                <span class="skill-tag">React</span>
-               <span class="skill-tag">Vue.js</span>
-               <span class="skill-tag">TypeScript</span>
-               <span class="skill-tag">CSS3</span>
+               <span class="skill-tag">SwiftUI</span>
+               <span class="skill-tag">HTML & CSS</span>
             </div>
          </div>
          <div class="skill-card">
@@ -111,10 +111,11 @@
                <span class="skill-tag">Node.js</span>
                <span class="skill-tag">Python</span>
                <span class="skill-tag">PostgreSQL</span>
+               <span class="skill-tag">Firebase</span>
                <span class="skill-tag">MongoDB</span>
             </div>
          </div>
-         <div class="skill-card">
+         <!-- <div class="skill-card">
             <h3>DevOps & Cloud</h3>
             <p>Deploying and maintaining robust infrastructure</p>
             <div class="skill-tags">
@@ -123,12 +124,14 @@
                <span class="skill-tag">CI/CD</span>
                <span class="skill-tag">Kubernetes</span>
             </div>
-         </div>
+         </div> -->
          <div class="skill-card">
             <h3>Design & UX</h3>
             <p>Crafting beautiful and intuitive experiences</p>
             <div class="skill-tags">
                <span class="skill-tag">Figma</span>
+               <span class="skill-tag">AdobeXD</span>
+               <span class="skill-tag">Asset Design</span>
                <span class="skill-tag">UI Design</span>
                <span class="skill-tag">Prototyping</span>
                <span class="skill-tag">Animation</span>
@@ -165,20 +168,22 @@
 
    <!-- PROJECTS SECTION-->
    <section id="projects">
-      <h1>Projects</h1>
-      <p>A showcase of my recent work, highlighting diverse skills and creative solutions across various domains</p>
+      <div class="project-text">
+         <h1>Projects</h1>
+         <p>A showcase of my recent work, highlighting diverse skills and creative solutions across various domains</p>
+      </div>
       <div class="projects-scroll">
          <ul>
             <li>
-               <h2>E-Commerce Platform</h2>
+               <h3>E-Commerce Platform</h3>
                <p>Coming Soon!</p>
             </li>
             <li>
-               <h2>Task Management App</h2>
+               <h3>Task Management App</h3>
                <p>Coming Soon!</p>
             </li>
             <li>
-               <h2>Portfolio Generator</h2>
+               <h3>Portfolio Generator</h3>
                <p>Coming Soon!</p>
             </li>
          </ul>
@@ -191,9 +196,34 @@
       <h1>Get in touch</h1>
       <p>I'd love to hear from you! Whether you're interested in collaborating, have questions about my work, or just
          want to say hi, feel free to reach out.</p>
-      <button class="contact-links"><a href="mailto:emma.a.brannen@gmail.com">Email Me</a></button>
-      <button class="contact-links"><a href="https://www.linkedin.com/in/emmaabrannen/">LinkedIn</a></button>
-
+      <div class="contact-links">
+         <a href="mailto:emma.a.brannen@gmail.com">
+            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 24 24">
+               <path fill="#000000"
+                  d="m18.73 5.41l-1.28 1L12 10.46L6.55 6.37l-1.28-1A2 2 0 0 0 2 7.05v11.59A1.36 1.36 0 0 0 3.36 20h3.19v-7.72L12 16.37l5.45-4.09V20h3.19A1.36 1.36 0 0 0 22 18.64V7.05a2 2 0 0 0-3.27-1.64z" />
+            </svg>
+         </a>
+      </div>
+      <div class="contact-links">
+         <a href="https://www.linkedin.com/in/emma-a-brannen/">
+         <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 256 256">
+            <g fill="none">
+               <rect width="256" height="256" fill="#fff" rx="60" />
+               <rect width="256" height="256" fill="#0A66C2" rx="60" />
+               <path fill="#fff"
+                  d="M184.715 217.685h29.27a4 4 0 0 0 4-3.999l.015-61.842c0-32.323-6.965-57.168-44.738-57.168c-14.359-.534-27.9 6.868-35.207 19.228a.32.32 0 0 1-.595-.161V101.66a4 4 0 0 0-4-4h-27.777a4 4 0 0 0-4 4v112.02a4 4 0 0 0 4 4h29.268a4 4 0 0 0 4-4v-55.373c0-15.657 2.97-30.82 22.381-30.82c19.135 0 19.383 17.916 19.383 31.834v54.364a4 4 0 0 0 4 4ZM38 59.627c0 11.865 9.767 21.627 21.632 21.627c11.862-.001 21.623-9.769 21.623-21.631C81.253 47.761 71.491 38 59.628 38C47.762 38 38 47.763 38 59.627Zm6.959 158.058h29.307a4 4 0 0 0 4-4V101.66a4 4 0 0 0-4-4H44.959a4 4 0 0 0-4 4v112.025a4 4 0 0 0 4 4Z" />
+            </g>
+         </svg>
+         </a>
+      </div>
+      <div class="contact-links">
+         <a href="https://www.github.com/Imabyrd/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 432 432">
+               <path fill="#000000"
+                  d="M43 3h341q18 0 30.5 12.5T427 45v342q0 17-12.5 29.5T384 429H274q-7-1-7-21v-58q0-27-15-40q44-5 70.5-27t26.5-78q0-33-22-57q11-26-2-57q-18-6-58 22q-26-7-54-7t-53 7q-18-12-32.5-17.5T107 91h-6q-12 31-2 57q-22 24-22 57q0 55 27 77.5t70 27.5q-11 10-13 29q-42 18-62-18q-12-20-33-22q-2 0-4.5.5T56 303t8 9q15 7 24 31q1 2 2 4.5t6.5 9.5t13 10.5T130 374t30-2v36q0 20-8 21H43q-18 0-30.5-12.5T0 387V45q0-17 12.5-29.5T43 3z" />
+            </svg>
+         </a>
+      </div>
    </section>
    <!-- END CONTACT SECTION-->
    <footer class="copyright">
